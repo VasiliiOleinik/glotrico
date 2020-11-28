@@ -297,7 +297,8 @@ h4.title {
       width: 35px;
       height: 35px;
       -o-object-fit: cover;
-         object-fit: cover; }
+         object-fit: cover;
+      cursor: pointer; }
     .header-profile .profile-dropdown {
       position: absolute;
       background: #FFFFFF;
@@ -306,7 +307,8 @@ h4.title {
       -webkit-border-radius: 5px;
               border-radius: 5px;
       padding: 19px 30px 19px 22px;
-      right: 0; }
+      right: 0;
+      display: none; }
       .header-profile .profile-dropdown_item {
         margin-bottom: 8px; }
         .header-profile .profile-dropdown_item a {
