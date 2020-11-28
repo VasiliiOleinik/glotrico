@@ -1,215 +1,263 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="assets/img/favicon.ico" rel="shortcut icon">
-    <link type="text/css" href="css/libs.min.css" rel="stylesheet">
-    <link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
-    <link type="text/css" href="css/main.css" rel="stylesheet">
-    <title>GLOTRICO</title>
-  </head>
-  <body>
-    <div class="content-wrapper" id="contentWrapper">
-      <div class="page-wrapper" id="pageWrapper">
-        <header class="header">
-          <div class="header-bg">
-            <img src="img/main-bg.jpg" alt="BG">
-          </div>
-          <div class="box column">
-            <div class="header__body d-flex ai-center space-between w-100">
-              <a href="/" class="header-logo">
-                <img src="img/logo.svg" alt="Logo">
-              </a>
-              <div class="header-profile">
-                <img src="img/icon_profile.svg" alt="Profile" id="profile-ico">
-                <ul class="profile-dropdown">
-                  <li class="profile-dropdown_item">
-                    <a href="login.html">Вход</a>
-                  </li>
-                  <li class="profile-dropdown_item">
-                    <a href="registration.html">Регистрация</a>
-                  </li>
-                  <li class="profile-dropdown_item">
-                    <a href="logout.html">Выход</a>
-                  </li>
-                </ul>
-              </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="assets/img/favicon.ico" rel="shortcut icon">
+  <link type="text/css" href="css/libs.min.css" rel="stylesheet">
+  <link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
+  <link type="text/css" href="css/daterangepicker.css" rel="stylesheet">
+  <link type="text/css" href="css/main.css" rel="stylesheet">
+  <title>GLOTRICO</title>
+</head>
+
+<body>
+  <div class="content-wrapper" id="contentWrapper">
+    <div class="page-wrapper" id="pageWrapper">
+      <header class="header">
+        <div class="header-bg">
+          <img src="img/main-bg.jpg" alt="BG">
+        </div>
+        <div class="box column">
+          <div class="header__body d-flex ai-center space-between w-100">
+            <a href="/" class="header-logo">
+              <img src="img/logo.svg" alt="Logo">
+            </a>
+            <div class="header-profile">
+              <img src="img/icon_profile.svg" alt="Profile" id="profile-ico">
+              <ul class="profile-dropdown">
+                <li class="profile-dropdown_item">
+                  <a href="login.html">Вход</a>
+                </li>
+                <li class="profile-dropdown_item">
+                  <a href="registration.html">Регистрация</a>
+                </li>
+                <li class="profile-dropdown_item">
+                  <a href="logout.html">Выход</a>
+                </li>
+              </ul>
             </div>
-            <div class=" d-flex ai-center justify-center">
-                <form class="header__menud-flex ai-center space-between  m0-auto"></form>
-                    <div class="header-menu_section">
-                      <input type="text" name="country" placeholder="Куда едете?">
+          </div>
+          <form class="header__menu d-flex ai-center justify-start m0-auto">
+            <div class="header-menu_section d-flex ai-center justify-start">
+              <input type="text" name="country" placeholder="Куда едете?">
+            </div>
+            <div class="header-menu_section d-flex ai-center justify-start">
+              <input type="text" name="date" placeholder="Период" id="period">
+            </div>
+            <div class="header-menu_section d-flex ai-center justify-start">
+              <span class="menu-section_travelers d-flex">Путешественники</span>
+              <div class="travelers-menu">
+                <div class="d-flex w-100">
+                  <div class="travelers-menu_section d-flex column space-between">
+                    <div class="d-flex column">
+                      <span class="travelers-menu_title">Взрослый</span>
+                      <span class="travelers-menu_descr">От 14 лет</span>
                     </div>
-                    <div class="header-menu_section">
-                      <input type="text" name="date" placeholder="Период">
+                    <div class="travelers-menu_calc d-flex ai-center justify-start">
+                      <button type="button"
+                        class="btn-calc btn-minus d-flex ai-center justify-center disabled">-</button>
+                      <input type="text" name="adult-count" value="0">
+                      <button type="button" class="btn-calc btn-plus d-flex ai-center justify-center">+</button>
                     </div>
-                    <div class="header-menu_section">
-                      <input type="text" name="travelers" placeholder="Путешественники">
+                  </div>
+                  <div class="travelers-menu_section d-flex column space-between">
+                    <div class="d-flex column">
+                      <span class="travelers-menu_title">Детский</span>
+                      <span class="travelers-menu_descr">До 14 лет</span>
                     </div>
-                    <button type="submit" class="header-menu_submit">?</button>
-                </form>
-            </div>
-          </div>
-        </header>
-        <main class="main">
-          <div class="box column popular">
-            <h1 class="title popular-title">Популярные направления</h1>
-            <div class="main-popular-places d-flex flex-wrap">
-                <div class="popular-place d-flex ai-end column">
-                  <div class="popular-place_image">
-                    <img src="img/kiev.png" alt="Kiev">
+                    <div class="travelers-menu_calc d-flex ai-center justify-start">
+                      <button type="button"
+                        class="btn-calc btn-minus d-flex ai-center justify-center disabled">-</button>
+                      <input type="text" name="children-count" value="0">
+                      <button type="button" class="btn-calc btn-plus d-flex ai-center justify-center">+</button>
+                    </div>
                   </div>
-                  <div class="popular-place_info d-flex column">
-                    <a href="/" class="popular-place_link">Киев</a>
-                    <p class="popular-place_description">
-                      И, может быть, какое-то описание? А то не понятно что «Киев».
-                    </p>
-                  </div>
-                </div>
-                <div class="popular-place d-flex ai-end column">
-                  <div class="popular-place_image">
-                    <img src="img/dnepr.png" alt="Dnepr">
-                  </div>
-                  <div class="popular-place_info d-flex column">
-                    <a href="/" class="popular-place_link">Днепр</a>
-                    <p class="popular-place_description">
-                      И, может быть, какое-то описание? А то не понятно что «Киев».
-                    </p>
+                  <div class="travelers-menu_section d-flex column space-between">
+                    <div class="d-flex column">
+                      <span class="travelers-menu_title">Животные</span>
+                      <span class="travelers-menu_descr"></span>
+                    </div>
+                    <div class="travelers-menu_calc d-flex ai-center justify-start">
+                      <button type="button"
+                        class="btn-calc  btn-minus d-flex ai-center justify-center disabled">-</button>
+                      <input type="text" name="animals-count" value="0">
+                      <button type="button" class="btn-calc  btn-plus d-flex ai-center justify-center">+</button>
+                    </div>
                   </div>
                 </div>
-                <div class="popular-place d-flex ai-end column">
-                  <div class="popular-place_image">
-                    <img src="img/odessa.png" alt="Odessa">
-                  </div>
-                  <div class="popular-place_info d-flex column">
-                    <a href="/" class="popular-place_link">Одесса</a>
-                    <p class="popular-place_description">
-                      И, может быть, какое-то описание? А то не понятно что «Киев».
-                    </p>
-                  </div>
-                </div>
-                <div class="popular-place d-flex ai-end column">
-                  <div class="popular-place_image">
-                    <img src="img/charkov.png" alt="Charkov">
-                  </div>
-                  <div class="popular-place_info d-flex column">
-                    <a href="/" class="popular-place_link">Харьков</a>
-                    <p class="popular-place_description">
-                      И, может быть, какое-то описание? А то не понятно что «Киев».
-                    </p>
-                  </div>
-                </div>
-                <div class="popular-place d-flex ai-end column">
-                  <div class="popular-place_image">
-                    <img src="img/lvov.png" alt="Lvov">
-                  </div>
-                  <div class="popular-place_info d-flex column">
-                    <a href="/" class="popular-place_link">Львов</a>
-                    <p class="popular-place_description">
-                      И, может быть, какое-то описание? А то не понятно что «Киев».
-                    </p>
-                  </div>
-                </div>
-                <div class="popular-place d-flex ai-end column">
-                  <div class="popular-place_image">
-                    <img src="img/ujgorod.png" alt="Ujgorod">
-                  </div>
-                  <div class="popular-place_info d-flex column">
-                    <a href="/" class="popular-place_link">Ужгород</a>
-                    <p class="popular-place_description">
-                      И, может быть, какое-то описание? А то не понятно что «Киев».
-                    </p>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </main>
-      </div>
-      <div class="footer-wrapper" id="footerWrapper">
-        <footer class="footer">
-          <div class="box">
-            <div class="footer-body d-flex">
-              <div class="footer-section d-flex column">
-                <h4 class="title">О компании</h4>
-                <ul class="footer-section_list d-flex column">
-                  <li class="footer-section_item">
-                    <a href="/">Об Glotrico</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Акции</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Контакты</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer-section d-flex column">
-                <h4 class="title">Помощь</h4>
-                <ul class="footer-section_list d-flex column">
-                  <li class="footer-section_item">
-                    <a href="/">Поддержка</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Финансовые вопросы</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Гарантия</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Отзывы</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Статьи</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer-section d-flex column">
-                <h4 class="title">Парнтеры</h4>
-                <ul class="footer-section_list d-flex column">
-                  <li class="footer-section_item">
-                    <a href="/">Коммерческие хосты</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Финансовые вопросы</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Уникальное жилье</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Корпоративным клиентам</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Политика конфиденциальности</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Публичная оферта</a>
-                  </li>
-                  <li class="footer-section_item">
-                    <a href="/">Сезонные и праздничные спецпредложения</a>
-                  </li>
-                </ul>
               </div>
             </div>
-            <div class="footer-copyright d-flex column ai-center">
-              <a href="/" class="footer-logo">
-                <img src="img/logo-white.svg" alt="Logo">
-              </a>
-              <p class="copyright d-flex ai-center">
-                <img src="img/Union.svg" alt="Union">
-                <span>2020 glotrico</span>
-              </p>
+            <button type="submit" class="header-menu_submit d-flex ai-center justify-center">
+              <img src="img/icon_serch.svg" alt="Search">
+            </button>
+          </form>
+        </div>
+      </header>
+      <main class="main">
+        <div class="box column popular">
+          <h1 class="title popular-title">Популярные направления</h1>
+          <div class="main-popular-places d-flex flex-wrap">
+            <div class="popular-place d-flex ai-end column">
+              <div class="popular-place_image">
+                <img src="img/kiev.png" alt="Kiev">
+              </div>
+              <div class="popular-place_info d-flex column">
+                <a href="/" class="popular-place_link">Киев</a>
+                <p class="popular-place_description">
+                  И, может быть, какое-то описание? А то не понятно что «Киев».
+                </p>
+              </div>
+            </div>
+            <div class="popular-place d-flex ai-end column">
+              <div class="popular-place_image">
+                <img src="img/dnepr.png" alt="Dnepr">
+              </div>
+              <div class="popular-place_info d-flex column">
+                <a href="/" class="popular-place_link">Днепр</a>
+                <p class="popular-place_description">
+                  И, может быть, какое-то описание? А то не понятно что «Киев».
+                </p>
+              </div>
+            </div>
+            <div class="popular-place d-flex ai-end column">
+              <div class="popular-place_image">
+                <img src="img/odessa.png" alt="Odessa">
+              </div>
+              <div class="popular-place_info d-flex column">
+                <a href="/" class="popular-place_link">Одесса</a>
+                <p class="popular-place_description">
+                  И, может быть, какое-то описание? А то не понятно что «Киев».
+                </p>
+              </div>
+            </div>
+            <div class="popular-place d-flex ai-end column">
+              <div class="popular-place_image">
+                <img src="img/charkov.png" alt="Charkov">
+              </div>
+              <div class="popular-place_info d-flex column">
+                <a href="/" class="popular-place_link">Харьков</a>
+                <p class="popular-place_description">
+                  И, может быть, какое-то описание? А то не понятно что «Киев».
+                </p>
+              </div>
+            </div>
+            <div class="popular-place d-flex ai-end column">
+              <div class="popular-place_image">
+                <img src="img/lvov.png" alt="Lvov">
+              </div>
+              <div class="popular-place_info d-flex column">
+                <a href="/" class="popular-place_link">Львов</a>
+                <p class="popular-place_description">
+                  И, может быть, какое-то описание? А то не понятно что «Киев».
+                </p>
+              </div>
+            </div>
+            <div class="popular-place d-flex ai-end column">
+              <div class="popular-place_image">
+                <img src="img/ujgorod.png" alt="Ujgorod">
+              </div>
+              <div class="popular-place_info d-flex column">
+                <a href="/" class="popular-place_link">Ужгород</a>
+                <p class="popular-place_description">
+                  И, может быть, какое-то описание? А то не понятно что «Киев».
+                </p>
+              </div>
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </main>
     </div>
-    <script src="js/libs.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script src="js/common.js"></script>
-  </body>
+    <div class="footer-wrapper" id="footerWrapper">
+      <footer class="footer">
+        <div class="box">
+          <div class="footer-body d-flex">
+            <div class="footer-section d-flex column">
+              <h4 class="title">О компании</h4>
+              <ul class="footer-section_list d-flex column">
+                <li class="footer-section_item">
+                  <a href="/">Об Glotrico</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Акции</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-section d-flex column">
+              <h4 class="title">Помощь</h4>
+              <ul class="footer-section_list d-flex column">
+                <li class="footer-section_item">
+                  <a href="/">Поддержка</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Финансовые вопросы</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Гарантия</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Отзывы</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Статьи</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-section d-flex column">
+              <h4 class="title">Парнтеры</h4>
+              <ul class="footer-section_list d-flex column">
+                <li class="footer-section_item">
+                  <a href="/">Коммерческие хосты</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Финансовые вопросы</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Уникальное жилье</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Корпоративным клиентам</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Политика конфиденциальности</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Публичная оферта</a>
+                </li>
+                <li class="footer-section_item">
+                  <a href="/">Сезонные и праздничные спецпредложения</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-copyright d-flex column ai-center">
+            <a href="/" class="footer-logo">
+              <img src="img/logo-white.svg" alt="Logo">
+            </a>
+            <p class="copyright d-flex ai-center">
+              <img src="img/Union.svg" alt="Union">
+              <span>2020 glotrico</span>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/libs.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
+  <script src="js/moment.min.js"></script>
+  <script src="js/daterangepicker.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
 </html>
