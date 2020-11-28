@@ -6,36 +6,29 @@
     margin-bottom: 12px
   &-popular-places
     .popular-place
-      border-radius: 5px
+      border-radius: 20px
       overflow: hidden
       margin-bottom: 40px
       margin-right: 60px
       width: 400px
-      height: 280px
-      position: relative
-      padding: 18px 30px
-      &::after
-        content: ''
-        background: linear-gradient(180deg, rgba(30, 30, 30, 0) 30.53%, rgba(30, 30, 30, 0.45) 102.63%)
-        position: absolute
-        left: 0
-        top: 0
-        width: 100%
-        height: 100%
-        z-index: 2
+      min-height: 280px
+      background: $white
       &:nth-of-type(3n)
         margin-right: 0px
       &_image
-        position: absolute
-        left: 0
-        top: 0
-        z-index: 1
+        width: 100%
+        height: 300px
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+      &_info
+        padding: 33px 60px 40px 60px
       &_link
         font-family: 'Roboto', sans-serif
         font-style: normal
         font-weight: normal
-        font-size: 22px
-        line-height: 18px
-        color: $white
-        z-index: 3
-        position: relative
+        font-size: 32px
+        line-height: 37px
+        color: $black
+        margin-bottom: 10px
