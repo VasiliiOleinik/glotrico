@@ -16,22 +16,177 @@
     <div class="content-wrapper" id="contentWrapper">
       <div class="page-wrapper" id="pageWrapper">
         <header class="header">
-          <div class="box">
-            <div class="header__body d-flex ai-center space-between">
+          <div class="header-bg">
+            <img src="img/main-bg.jpg" alt="BG">
+          </div>
+          <div class="box column">
+            <div class="header__body d-flex ai-center space-between w-100">
               <a href="/" class="header-logo">
                 <img src="img/logo.svg" alt="Logo">
               </a>
+              <div class="header-profile">
+                <img src="img/icon_profile.svg" alt="Profile" id="profile-ico">
+                <ul class="profile-dropdown">
+                  <li class="profile-dropdown_item">
+                    <a href="login.html">Вход</a>
+                  </li>
+                  <li class="profile-dropdown_item">
+                    <a href="registration.html">Регистрация</a>
+                  </li>
+                  <li class="profile-dropdown_item">
+                    <a href="logout.html">Выход</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__menu d-flex ai-center justify-center m0-auto">
+                <form class="header__menu-content d-flex ai-center space-between">
+                    <div class="header-menu_section">
+                      <input type="text" name="country" placeholder="Куда едете?">
+                    </div>
+                    <div class="header-menu_section">
+                      <input type="text" name="date" placeholder="Период">
+                    </div>
+                    <div class="header-menu_section">
+                      <input type="text" name="travelers" placeholder="Путешественники">
+                    </div>
+                    <button type="submit" class="header-menu_submit">?</button>
+                </form>
             </div>
           </div>
         </header>
         <main class="main">
-          <div class="box"></div>
+          <div class="box column popular">
+            <h1 class="title popular-title">Популярные направления</h1>
+            <div class="main-popular-places d-flex flex-wrap">
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/kiev.png" alt="Kiev" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Киев</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/dnepr.png" alt="Dnepr" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Днепр</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/odessa.png" alt="Odessa" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Одесса</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/charkov.png" alt="Charkov" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Харьков</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/lvov.png" alt="Lvov" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Львов</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/ujgorod.png" alt="Ujgorod" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Ужгород</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/kiev.png" alt="Kiev" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Киев</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/dnepr.png" alt="Dnepr" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Днепр</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/odessa.png" alt="Odessa" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Одесса</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/kiev.png" alt="Kiev" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Киев</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/dnepr.png" alt="Dnepr" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Днепр</a>
+                </div>
+                <div class="popular-place d-flex ai-end">
+                  <img src="img/odessa.png" alt="Odessa" class="popular-place_image">
+                  <a href="/" class="popular-place_link">Одесса</a>
+                </div>
+            </div>
+          </div>
         </main>
       </div>
       <div class="footer-wrapper" id="footerWrapper">
-        <footer class="footer">
-          <div class="box">
-            <div class="footer__body"></div>
+        <footer class="footer column">
+          <div class="footer-body">
+            <div class="box">
+              <div class="footer-section d-flex column">
+                <h4 class="title">О компании</h4>
+                <ul class="footer-section_list d-flex column">
+                  <li class="footer-section_item">
+                    <a href="/">Об Glotrico</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Акции</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-section d-flex column">
+                <h4 class="title">Помощь</h4>
+                <ul class="footer-section_list d-flex column">
+                  <li class="footer-section_item">
+                    <a href="/">Поддержка</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Финансовые вопросы</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Гарантия</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Отзывы</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Статьи</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-section d-flex column">
+                <h4 class="title">Парнтеры</h4>
+                <ul class="footer-section_list d-flex column">
+                  <li class="footer-section_item">
+                    <a href="/">Коммерческие хосты</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Финансовые вопросы</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Уникальное жилье</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Корпоративным клиентам</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Политика конфиденциальности</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Публичная оферта</a>
+                  </li>
+                  <li class="footer-section_item">
+                    <a href="/">Сезонные и праздничные спецпредложения</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="box space-between ai-center h-100">
+              <a href="/" class="footer-logo">
+                <img src="img/logo.svg" alt="Logo">
+              </a>
+              <p class="copyright d-flex ai-center">
+                <img src="img/Union.svg" alt="Union">
+                <span>2020 glotrico</span>
+              </p>
+            </div>
           </div>
         </footer>
       </div>
