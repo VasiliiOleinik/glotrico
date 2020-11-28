@@ -103,6 +103,7 @@ gulp.task('clear', function (callback) {
 
 gulp.task('watch', ['browser-sync', 'pug', 'sass', 'css-libs', 'scripts'], function(){
   gulp.watch('app/sass/**/*.sass', ['sass']);
-  gulp.watch('app/pug/**/*.pug', ['pug']);
+  // gulp.watch('app/pug/**/*.pug', ['pug']);
+  gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
   gulp.watch('app/js/*.js', browserSync.reload);
 });
