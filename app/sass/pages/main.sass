@@ -56,3 +56,133 @@
           path
             fill: orange
             transition: all .2s linear
+  .search-result
+    background: $white
+    height: 620px
+    margin-bottom: 52px
+    &__hotels
+      width: 360px
+      margin-right: 15px
+      background: red
+      flex-shrink: 0
+    &__map
+      iframe
+        width: 650px
+        height: 620px
+    &__filter
+      width: 320px
+      background: $white
+      box-shadow: -7px 0px 10px 0px rgba(83, 104, 134, 0.3)
+      padding: 40px 20px 40px 24px
+      flex-shrink: 0
+      position: relative
+      z-index: 1
+      .search-info
+        p
+          font-family: 'Roboto', sans-serif
+          font-style: normal
+          font-weight: normal
+          font-size: 14px
+          line-height: 16px
+          color: $black
+          margin-bottom: 10px
+          span
+            width: 120px
+            margin-right: 25px
+            display: inline-block
+          a
+            color: #003580
+      .search-terms
+        margin-top: 36px
+        input
+          transition: all .2s linear
+          &:focus
+            border: 1px solid  #003580
+        &_tags
+          .tags-label
+            width: 25%
+            flex-shrink: 0
+            margin-bottom: 10px
+            input
+              display: none
+            .tag-ico
+              width: 40px
+              height: 40px
+              border: 1px solid #B5D3DF
+              box-sizing: border-box
+              border-radius: 50%
+              margin-bottom: 10px
+              transition: all .2s linear
+              svg
+                path
+                  fill: #4592AF
+                  transition: all .2s linear
+            input:checked + .tag-ico
+              border: 1px solid transparent
+              svg
+                path
+                  fill: $white
+                  transition: all .2s linear
+            input:checked + .tag-ico.brown
+              background: #BC895F
+            input:checked + .tag-ico.blue
+              background: #4592AF
+            input:checked + .tag-ico.pink
+              background: rgba(215, 20, 8, .4)
+            input:checked + .tag-ico.red
+              background: #E86241
+            .tag-name
+              font-family: 'Roboto', sans-serif
+              font-style: normal
+              font-weight: normal
+              font-size: 12px;
+              line-height: 14px;
+              letter-spacing: 0.274626px
+              color: $black
+              text-align: center
+        &_title
+          font-family: 'Roboto', sans-serif
+          font-style: normal
+          font-weight: normal
+          font-size: 12px
+          line-height: 14px
+          color: $black
+          margin-bottom: 12px
+          display: inline-block
+        .full-input
+          width: 100%
+          height: 40px
+          background: $white
+          border: 1px solid #CED5E2
+          box-sizing: border-box
+          border-radius: 6px
+          padding: 0px 9px
+          font-family: 'Roboto', sans-serif
+          font-style: normal
+          font-weight: normal
+          color: $colorGray
+          font-size: 12px
+          line-height: 14px
+          margin-bottom: 15px
+        .double-input
+          .date-input_wrap
+            width: calc(50% - 5px)
+            position: relative
+            &::after
+              content: url(../img/calendar.svg)
+              position: absolute
+              right: 15px
+              top: 20px
+              transform: translateY(-50%)
+            input
+              padding-right: 35px
+            &:nth-of-type(1)
+              margin-right: 5px
+            &:nth-of-type(2)
+              margin-left: 5px
+              line-height: 14px
+              
+.search-page
+  .title.popular-title
+    color: #536886
+    margin-bottom: 15px

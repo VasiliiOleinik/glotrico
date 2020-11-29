@@ -15,7 +15,8 @@ body
     outline: 0
     background-color: transparent
     box-sizing: border-box
-
+  &.search-page
+    background: #fdfdfd
 a
   text-decoration: none
   transition: .2s
@@ -155,3 +156,18 @@ h4.title
   font-size: 20px
   line-height: 40px
   color: $black
+
+body
+  scrollbar-width: thin
+  &::-webkit-scrollbar
+    height: 8px
+    background-color: #E9F1FC
+  &::-webkit-scrollbar
+    height: 8px
+    width: 8px
+    background-color: #E9F1FC
+  &::-webkit-scrollbar-thumb
+    height: 8px
+    border-radius: 4px
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+    background-color: #ADC9D4

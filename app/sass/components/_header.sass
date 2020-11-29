@@ -37,6 +37,7 @@
       right: 0
       top: calc(100% + 6px)
       display: none
+      z-index: 999
       &_item
         margin-bottom: 8px
         a
@@ -111,6 +112,7 @@
       top: 100%
       width: 365px
       display: none
+      z-index: 999
       &_section
         width: 100px
       &_title
@@ -157,3 +159,9 @@
       border-radius: 50%
       &:hover
         background: #d86d03
+.search-page
+  .header
+    height: 100px
+    background: $white
+  .header-bg
+    display: none
