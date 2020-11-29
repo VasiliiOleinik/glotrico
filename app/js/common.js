@@ -57,14 +57,6 @@ $(function () {
       $('.travelers-menu').fadeOut();
     }
   });
-  $(document).mouseup(function (e) {
-    var div = $(".travelers-menu");
-    if (!div.is(e.target)
-      && div.has(e.target).length === 0) {
-      div.fadeOut();
-      $('.menu-section_travelers').removeClass('active');
-    }
-  });
   // Калькулятор пассажиров
   $('.travelers-menu_calc .btn-plus').on('click', function () {
     let thisValue = Number.parseInt($(this).siblings('input').val());
