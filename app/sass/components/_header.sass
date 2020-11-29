@@ -1,5 +1,5 @@
 .header
-  height: 640px
+  height: 760px
   &-bg
     position: absolute
     top: 0
@@ -9,7 +9,7 @@
     & img
       object-fit: cover
       width: 100%
-      max-height: 720px
+      max-height: 835px
       height: 100%
     &::after
       content: ''
@@ -31,17 +31,27 @@
       cursor: pointer
     .profile-dropdown
       position: absolute
-      background: $white
-      box-shadow: 0px 4px 7px rgba(143, 121, 121, 0.3)
-      border-radius: 5px
+      background: #FFFFFF
+      box-shadow: 0px 4px 20px rgba(83, 104, 134, 0.3)
+      border-radius: 10px
       padding: 19px 30px 19px 22px
       right: 0
+      top: calc(100% + 6px)
       display: none
       &_item
         margin-bottom: 8px
         a
           font-family: 'Source Sans Pro', sans-serif
           font-size: 16px
+          color: #536886
+    &_cab
+      font-family: 'Roboto', sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 18px
+      color: #536886
+      margin-right: 10px
   &__menu
     max-width: 700px
     height: 60px

@@ -32,3 +32,29 @@
         line-height: 37px
         color: $black
         margin-bottom: 10px
+  & .popular-place_more
+    a
+      font-family: 'Source Sans Pro', sans-serif
+      font-style: normal
+      font-weight: 600
+      font-size: 30px
+      line-height: 38px
+      text-transform: uppercase
+      color: #536886
+      transition: none
+      span
+        padding-bottom: 7px
+        border-bottom: 2px dashed #536886
+        transition: all .2s linear
+      svg
+        margin-left: 10px
+        path
+        transition: all .2s linear
+      &:hover
+        span
+          border-color: $orange
+          transition: all .2s linear
+        svg
+          path
+            fill: orange
+            transition: all .2s linear

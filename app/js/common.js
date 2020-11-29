@@ -1,7 +1,7 @@
 $(function () {
   // Выпадающее меню из профиля
-  $('#profile-ico').on('click', function () {
-    $(this).siblings('.profile-dropdown').fadeIn();
+  $('#profile-cab').on('click', function () {
+    $(this).children('.profile-dropdown').fadeIn();
   });
   $(document).mouseup(function (e) {
     var div = $(".profile-dropdown");
@@ -66,17 +66,17 @@ $(function () {
     }
   });
   // Калькулятор пассажиров
-  $('.travelers-menu_calc .btn-plus').on('click', function() {
+  $('.travelers-menu_calc .btn-plus').on('click', function () {
     let thisValue = Number.parseInt($(this).siblings('input').val());
     $(this).siblings('input').val(++thisValue);
-    if(thisValue > 0) {
+    if (thisValue > 0) {
       $(this).siblings('.btn-minus').removeClass('disabled');
     }
   });
-  $('.travelers-menu_calc .btn-minus').on('click', function() {
+  $('.travelers-menu_calc .btn-minus').on('click', function () {
     let thisValue = Number.parseInt($(this).siblings('input').val());
     $(this).siblings('input').val(--thisValue);
-    if(thisValue <= 0) {
+    if (thisValue <= 0) {
       $(this).siblings('input').val(0);
       $(this).addClass('disabled');
     } else {
