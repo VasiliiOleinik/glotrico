@@ -61,11 +61,17 @@
     position: relative
     padding: 5px 10px 5px 0px
     .header-menu_section
-      width: 195px
+      width: 200px
       height: 100%
       border-right: 2px solid #F5F4F4
       padding: 0px 24px
       position: relative
+      &.period::after
+        content: url(../img/calendar.svg)
+        position: absolute
+        right: 24px
+        top: 50%
+        transform: translateY(-50%)
       &:last-of-type
         border-right: none
       & input
@@ -74,9 +80,7 @@
         font-weight: normal
         font-size: 14px
         line-height: 16px
-        color: $black
-        &:placeholder
-          color: $colorGray
+        color: $colorGray
       .menu-section_travelers
         font-family: 'Roboto', sans-serif
         font-style: normal
@@ -89,7 +93,7 @@
         &::after
           content: url(../img/arrow-down.svg)
           position: absolute
-          right: -20px
+          right: 0px
           top: 50%
           transform: translateY(-50%)
           transition: all .2s linear

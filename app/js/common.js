@@ -46,7 +46,7 @@ $(function () {
     },
   });
   $('#period').on('apply.daterangepicker', function (ev, picker) {
-    $(this).val(picker.startDate.format('MM.DD.YYYY') + ' - ' + picker.endDate.format('MM.DD.YYYY'));
+    $(this).val(picker.startDate.format('MM.DD.YY') + ' - ' + picker.endDate.format('MM.DD.YY'));
   });
   // Выбор пассажиров
   $('.menu-section_travelers').on('click', function () {

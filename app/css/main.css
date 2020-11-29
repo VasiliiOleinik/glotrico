@@ -343,11 +343,19 @@ h4.title {
     position: relative;
     padding: 5px 10px 5px 0px; }
     .header__menu .header-menu_section {
-      width: 195px;
+      width: 200px;
       height: 100%;
       border-right: 2px solid #F5F4F4;
       padding: 0px 24px;
       position: relative; }
+      .header__menu .header-menu_section.period::after {
+        content: url(../img/calendar.svg);
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
       .header__menu .header-menu_section:last-of-type {
         border-right: none; }
       .header__menu .header-menu_section input {
@@ -356,9 +364,7 @@ h4.title {
         font-weight: normal;
         font-size: 14px;
         line-height: 16px;
-        color: #000000; }
-        .header__menu .header-menu_section input:placeholder {
-          color: rgba(0, 0, 0, 0.54); }
+        color: rgba(0, 0, 0, 0.54); }
       .header__menu .header-menu_section .menu-section_travelers {
         font-family: 'Roboto', sans-serif;
         font-style: normal;
@@ -371,7 +377,7 @@ h4.title {
         .header__menu .header-menu_section .menu-section_travelers::after {
           content: url(../img/arrow-down.svg);
           position: absolute;
-          right: -20px;
+          right: 0px;
           top: 50%;
           -webkit-transform: translateY(-50%);
               -ms-transform: translateY(-50%);
